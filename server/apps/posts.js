@@ -1,11 +1,10 @@
 import { ObjectId } from "mongodb";
 import { Router } from "express";
 import { db } from "../utils/db.js";
-
+import { protect } from "../middlewares/protect.js";
 const postRouter = Router();
+postRouter.use(protect);
 
-// 🐨 Todo: Exercise #5
-// นำ Middleware `protect` มาใช้กับ `postRouter` ด้วย Function `app.use`
 
 postRouter.get("/", async (req, res) => {
   const status = req.query.status;

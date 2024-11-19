@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 
 const authRouter = Router();
 
+
 // 🐨 Todo: Exercise #1
 // ให้สร้าง API เพื่อเอาไว้ Register ตัว User แล้วเก็บข้อมูลไว้ใน Database ตามตารางที่ออกแบบไว้
 authRouter.post("/register", async (req, res) => {
